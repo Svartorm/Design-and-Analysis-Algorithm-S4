@@ -1,3 +1,4 @@
+// https://www.eolymp.com/en/problems/10281
 #include <stdio.h>
 #include <algorithm>
 
