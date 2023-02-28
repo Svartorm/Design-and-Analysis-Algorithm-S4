@@ -17,11 +17,8 @@ void solve() {
     n = floor(sqrt(2*k) + 1.0/2.0);
 
     // Determine m
-    nmax = n;
-    kmax = k;
-    while (nmax == n)
-        nmax = floor(sqrt(2*(++kmax)) + 1.0/2.0);
-    m = n - (kmax - k);
+    kmax = n*(n+1) / 2;
+    m = n - (kmax + 1 - k);
 
     // Show result
     printf("%d %d\n", m, n);
