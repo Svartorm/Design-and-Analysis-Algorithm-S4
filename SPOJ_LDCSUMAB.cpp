@@ -6,14 +6,12 @@
 #include <cstdio>
 #include <math.h>
 
-float t, k;
+int t, k;
 
 void solve() {
-    int n = 0, m, nmax, kmax;
+    int n = 0, m, kmax;
 
     // Determine n
-    //while (k>s)
-    //    s += ++n;
     n = floor(sqrt(2*k) + 1.0/2.0);
 
     // Determine m
@@ -26,10 +24,10 @@ void solve() {
 
 int main() {
     // Input
-    scanf_s("%f",&t);
+    scanf_s("%d",&t);
 
     for (int test = 0; test <t; test++) {
-        scanf("%f", &k);
+        scanf("%d", &k);
         solve();
     }
 
