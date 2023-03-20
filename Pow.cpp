@@ -7,47 +7,36 @@
 
 using namespace std;
 
-int a, b;
+long long int a, b;
 
-long IntPow (int a, int b, bool eff) {
-    if (b == 0)
-        return 1;
-    if (b == 1)
-        return a;
+// Binary exponentiation
+long long int binEx (long long int a, long long int b) {
 
-    long res = a;
-    // -> Precise +++; fast ++
-    if (eff)
-        res = ::pow(a, b);
-    // -> Precise ++++; fast -
-    else
-        while (--b) res *= a;
-
-    return res;
 }
 
-long solve (int a, int b, bool eff = false) {
-    long p, res = 0, r;
+// Fast exponentiation
+long long int fastEx (int a, int b) {
+
+}
+
+long long int solve (long long int a,long long int b, bool bin = false) {
+    long long int p;
 
     // Get A^b
-    p = IntPow(a, b, eff);
+    p = bin ? binEx(a, b) : fastEx(a, b);
 
     // Keep only the 6 last digits
-    for (int i = 0; p && i<6; i++) {
-        r = p % 10;
-        p /= 10;
-        res = (r * IntPow(10, i, eff)) + res;
-    }
+    p %= 1000000;
 
-    return res;
+    return p;
 }
 
 int main () {
 
     while (true) {
-        scanf_s("%i", &a);
-        scanf_s("%i", &b);
-        printf("-> %ld", solve(a, b));
+        scanf_s("%llu", &a);
+        scanf_s("%llu", &b);
+        printf("-> %llu", solve(a, b));
     }
 
     return 0;
