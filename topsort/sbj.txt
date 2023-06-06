@@ -1,0 +1,35 @@
+Description
+
+Do you know maze games? If you look at the following picture, you must know it. In this maze game, the creature depicted with the round face of Mr. Groovy must find a way out of the given maze plot.
+
+The way out that he must go through is the yellow city-box. The problem is that since there can be multiple ways to reach the exit, you have to find the least number of squares in the path, which is also the shortest number of steps to reach the outside. In the case of the maze example above, the least number of squares/steps is 17, which is the yellow one.
+
+Given a maze of size N × M, with Mr. Groovy's initial position at (A, B), determine the minimum number of steps required to reach the outside.
+Input Format
+
+The first line contains two integers N and M. The next N lines each contain M numbers -1 representing an impenetrable wall, or 0 representing a traversable space. The next line contains two integers A and B. It is guaranteed that plot (A, B) is a room. It is guaranteed that there is at least one way out.
+Output Format
+
+A line contains an integer that is the minimum step to reach the outside.
+Example Input
+
+8 10
+-1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+-1 0 0 0 0 0 -1 0 0 0
+-1 0 0 -1 -1 0 0 0 -1 -1
+-1 -1 0 0 -1 -1 -1 0 0 -1
+-1 0 0 0 -1 0 -1 -1 -1 -1
+-1 0 -1 0 -1 0 -1 0 0 -1
+-1 0 -1 0 0 0 0 0 -1 -1
+-1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+7 5
+
+Sample Output
+
+17
+
+Constraints
+
+    3 ≤ N, M ≤ 100
+    1 ≤ A ≤ N
+    1 ≤ B ≤ M
